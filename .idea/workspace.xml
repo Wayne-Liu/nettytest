@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4a2f3587-fa91-4c14-a671-ff5ea5ce319f" name="Default Changelist" comment="" />
+    <list default="true" id="4a2f3587-fa91-4c14-a671-ff5ea5ce319f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/common/RequestMessagePacketEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/common/RequestMessagePacketEncoder.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +22,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -25,7 +33,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1gXNvD5q3GwEIXOY9lIPiTOhohM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
@@ -164,11 +174,22 @@
       <workItem from="1600260791403" duration="5061000" />
       <workItem from="1600348077500" duration="31000" />
       <workItem from="1600348136817" duration="1443000" />
-      <workItem from="1600395484778" duration="7580000" />
+      <workItem from="1600395484778" duration="9866000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
