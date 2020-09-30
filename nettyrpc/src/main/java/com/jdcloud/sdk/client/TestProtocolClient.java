@@ -62,7 +62,7 @@ public class TestProtocolClient {
             packet.setVersion(4);
             packet.setSerialNumber("generateSerialNumber()");
             packet.setMessageType(MessageType.REQUEST);
-            packet.setInterfaceName("club.throwable.contract.HelloService");
+            packet.setInterfaceName("com.jdcloud.sdk.server.contract.HelloService");
             packet.setMethodName("sayHello");
             packet.setMethodArgumentSignatures(new String[]{"java.lang.String"});
             packet.setMethodArguments(new Object[]{"doge"});

@@ -3,9 +3,13 @@ package com.jdcloud.sdk.server;
 import com.jdcloud.sdk.common.FastJsonSerializer;
 import com.jdcloud.sdk.common.Serializer;
 import io.netty.buffer.ByteBuf;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Slf4j
+@Component
 public class DefaultMethodArgumentConverter implements MethodArgumentConverter {
     private final Serializer serializer = FastJsonSerializer.X;
 

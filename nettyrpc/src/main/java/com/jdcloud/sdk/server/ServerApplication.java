@@ -27,7 +27,7 @@ public class ServerApplication implements CommandLineRunner {
     private ServerHandler serverHandler;
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringApplication.class, args);
+        SpringApplication.run(ServerApplication.class, args);
     }
     @Override
     public void run(String... args) throws Exception {
@@ -47,6 +47,7 @@ public class ServerApplication implements CommandLineRunner {
                             ch.pipeline().addLast(new LengthFieldPrepender(4));
                             ch.pipeline().addLast(new RequestMessagePacketDecoder(FastJsonSerializer.X));
                             ch.pipeline().addLast(new ResponseMessagePacketEncoder(FastJsonSerializer.X));
+                            ch.pipeline().addLast(serverHandler);
                         }
                     });
 
