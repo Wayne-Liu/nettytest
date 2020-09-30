@@ -2,19 +2,84 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a2f3587-fa91-4c14-a671-ff5ea5ce319f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/client/TestProtocolClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/common/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/common/RequestMessagePacketDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/common/ResponseMessagePacketDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/common/ResponseMessagePacketEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/server/BaseMethodMatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/server/HostClassMethodInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/server/MethodMatchException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/server/MethodMatchInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/server/MethodMatchOutput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/server/MethodMatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/server/TestProtocolServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/server/ArgumentConvertInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/server/ArgumentConvertOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/server/DefaultMethodArgumentConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/server/MethodArgumentConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/server/ServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/server/ServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/server/SpringMethodMatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/server/contract/DefaultHelloService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/server/contract/HelloService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/client/TestProtocolClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/client/TestProtocolClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/common/BaseMessagePacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/common/BaseMessagePacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/common/FastJsonSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/common/FastJsonSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/common/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/common/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/common/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/common/MessageType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/common/RequestMessagePacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/common/RequestMessagePacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/common/RequestMessagePacketDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/common/RequestMessagePacketDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/common/RequestMessagePacketEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/common/RequestMessagePacketEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/common/ResponseMessagePacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/common/ResponseMessagePacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/common/ResponseMessagePacketDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/common/ResponseMessagePacketDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/common/ResponseMessagePacketEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/common/ResponseMessagePacketEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/common/Serializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/common/Serializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/server/BaseMethodMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/server/BaseMethodMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/server/HostClassMethodInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/server/HostClassMethodInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/server/MethodMatchException.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/server/MethodMatchException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/server/MethodMatchInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/server/MethodMatchInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/server/MethodMatchOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/server/MethodMatchOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/server/MethodMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/server/MethodMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdclud/sdk/server/TestProtocolServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/main/java/com/jdcloud/sdk/server/TestProtocolServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/src/test/java/com/jdclud/sdk/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/nettyrpc/src/test/java/com/jdcloud/sdk/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/target/classes/com/jdclud/sdk/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/target/classes/com/jdclud/sdk/client/TestProtocolClient$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/target/classes/com/jdclud/sdk/client/TestProtocolClient$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/target/classes/com/jdclud/sdk/client/TestProtocolClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/target/classes/com/jdclud/sdk/common/BaseMessagePacket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/target/classes/com/jdclud/sdk/common/FastJsonSerializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/target/classes/com/jdclud/sdk/common/MessageType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/target/classes/com/jdclud/sdk/common/RequestMessagePacket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/target/classes/com/jdclud/sdk/common/RequestMessagePacketDecoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/target/classes/com/jdclud/sdk/common/RequestMessagePacketEncoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/target/classes/com/jdclud/sdk/common/ResponseMessagePacket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/target/classes/com/jdclud/sdk/common/ResponseMessagePacketDecoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/target/classes/com/jdclud/sdk/common/ResponseMessagePacketEncoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/target/classes/com/jdclud/sdk/common/Serializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/target/classes/com/jdclud/sdk/server/TestProtocolServer$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/target/classes/com/jdclud/sdk/server/TestProtocolServer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/target/classes/com/jdclud/sdk/server/TestProtocolServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nettyrpc/target/test-classes/com/jdclud/sdk/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/originrpc/src/main/java/com/jdclud/sdk/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/originrpc/src/main/java/com/jdcloud/sdk/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/originrpc/src/main/java/com/jdclud/sdk/client/CalculatorClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/originrpc/src/main/java/com/jdcloud/sdk/client/CalculatorClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/originrpc/src/main/java/com/jdclud/sdk/common/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/originrpc/src/main/java/com/jdcloud/sdk/common/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/originrpc/src/main/java/com/jdclud/sdk/common/CalculatorRemoteImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/originrpc/src/main/java/com/jdcloud/sdk/common/CalculatorRemoteImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/originrpc/src/main/java/com/jdclud/sdk/common/CalculatorRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/originrpc/src/main/java/com/jdcloud/sdk/common/CalculatorRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/originrpc/src/main/java/com/jdclud/sdk/server/CalculatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/originrpc/src/main/java/com/jdcloud/sdk/server/CalculatorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/originrpc/src/main/java/com/jdclud/sdk/server/ProviderApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/originrpc/src/main/java/com/jdcloud/sdk/server/ProviderApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/originrpc/src/test/java/com/jdclud/sdk/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/originrpc/src/test/java/com/jdcloud/sdk/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdclud/sdk/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdcloud/sdk/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdclud/sdk/netty/getstart/DiscardServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdcloud/sdk/netty/getstart/DiscardServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdclud/sdk/netty/getstart/DiscardServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdcloud/sdk/netty/getstart/DiscardServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdclud/sdk/netty/getstart/TimeClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdcloud/sdk/netty/getstart/TimeClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdclud/sdk/netty/getstart/TimeClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdcloud/sdk/netty/getstart/TimeClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdclud/sdk/netty/getstart/TimeDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdcloud/sdk/netty/getstart/TimeDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdclud/sdk/netty/getstart/TimeEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdcloud/sdk/netty/getstart/TimeEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdclud/sdk/netty/getstart/TimeEncoder2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdcloud/sdk/netty/getstart/TimeEncoder2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdclud/sdk/netty/getstart/TimeServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdcloud/sdk/netty/getstart/TimeServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdclud/sdk/netty/getstart/TimeServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdcloud/sdk/netty/getstart/TimeServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdclud/sdk/netty/getstart/UnixTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdcloud/sdk/netty/getstart/UnixTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdclud/sdk/netty/getstart/zerocoppy/ByteBufDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdcloud/sdk/netty/getstart/zerocoppy/ByteBufDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdclud/sdk/netty/getstart/zerocoppy/FileClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdcloud/sdk/netty/getstart/zerocoppy/FileClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdclud/sdk/netty/getstart/zerocoppy/FileClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdcloud/sdk/netty/getstart/zerocoppy/FileClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdclud/sdk/netty/getstart/zerocoppy/FileClientOutHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdcloud/sdk/netty/getstart/zerocoppy/FileClientOutHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdclud/sdk/netty/getstart/zerocoppy/FileServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdcloud/sdk/netty/getstart/zerocoppy/FileServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdclud/sdk/netty/getstart/zerocoppy/FileServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdcloud/sdk/netty/getstart/zerocoppy/FileServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdclud/sdk/netty/getstart/zerocoppy/FileZeroCopyDome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdcloud/sdk/netty/getstart/zerocoppy/FileZeroCopyDome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jdclud/sdk/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jdcloud/sdk/AppTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +111,12 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -57,8 +128,8 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.jdclud.sdk.server" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\jd\gitspace\wayne1\nettytest\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.jdclud.sdk.common" />
@@ -66,8 +137,8 @@
       <recent name="com.jdclud.sdk.netty.getstart.zerocoppy" />
       <recent name="com.jdclud.sdk.netty.getstart" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\jd\gitspace\wayne1\nettytest\src\main\java" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.jdclud.sdk.server" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -82,39 +153,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestProtocolClient">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jdcloud.sdk.App" />
+      <module name="nettyrpc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jdcloud.sdk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CalculatorClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jdclud.sdk.client.CalculatorClient" />
       <module name="originrpc" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.jdclud.sdk.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HttpHelloWorldClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="io.netty.example.http.helloworld.wayne.HttpHelloWorldClient" />
-      <module name="nettytest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.netty.example.http.helloworld.wayne.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProviderApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jdclud.sdk.server.ProviderApp" />
-      <module name="originrpc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jdclud.sdk.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -148,20 +206,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="nettyrpc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jdcloud.sdk.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.jdcloud.sdk.server.ServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.HttpHelloWorldClient" />
-      <item itemvalue="Application.ProviderApp" />
       <item itemvalue="Application.CalculatorClient" />
       <item itemvalue="Application.TestProtocolServer" />
       <item itemvalue="Application.TestProtocolClient" />
+      <item itemvalue="Spring Boot.ServerApplication" />
+      <item itemvalue="Application.App" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="Spring Boot.ServerApplication" />
         <item itemvalue="Application.TestProtocolClient" />
         <item itemvalue="Application.TestProtocolServer" />
         <item itemvalue="Application.CalculatorClient" />
-        <item itemvalue="Application.ProviderApp" />
-        <item itemvalue="Application.HttpHelloWorldClient" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +260,8 @@
       <workItem from="1600348077500" duration="31000" />
       <workItem from="1600348136817" duration="1443000" />
       <workItem from="1600395484778" duration="10289000" />
-      <workItem from="1600743890833" duration="19123000" />
+      <workItem from="1600743890833" duration="20814000" />
+      <workItem from="1601381816176" duration="7472000" />
     </task>
     <servers />
   </component>
