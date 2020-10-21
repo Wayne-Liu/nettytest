@@ -26,7 +26,7 @@ import java.util.function.Function;
 //@RunWith(SpringRunner.class)
 //@SpringBootTest
 
-   @Slf4j
+@Slf4j
 public class AppTest 
 {
     /**
