@@ -5,6 +5,7 @@ import com.google.common.collect.Lists;
 import com.jdcloud.sdk.common.MessageType;
 import com.jdcloud.sdk.common.RequestMessagePacket;
 import com.jdcloud.sdk.common.ResponseMessagePacket;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import lombok.extern.slf4j.Slf4j;
@@ -17,6 +18,7 @@ import java.util.Optional;
 
 @Component
 @Slf4j
+@ChannelHandler.Sharable
 public class ServerHandler extends SimpleChannelInboundHandler<RequestMessagePacket> {
     @Autowired
     private MethodMatcher methodMatcher;
