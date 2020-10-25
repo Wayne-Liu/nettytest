@@ -27,6 +27,7 @@ public class ContractProxyFactory {
     private static final ScheduledExecutorService CLIENT_HOUSE_KEEPER;
     private static final Serializer SERIALIZER = FastJsonSerializer.X;
 
+    @SuppressWarnings("unchecked")
     public static <T> T ofProxy(Class<T> interfaceKlass) {
         return (T)CACHE.computeIfAbsent(interfaceKlass, x ->
                 Proxy.newProxyInstance(interfaceKlass.getClassLoader(), new Class[]{interfaceKlass},(target,method,args) -> {
