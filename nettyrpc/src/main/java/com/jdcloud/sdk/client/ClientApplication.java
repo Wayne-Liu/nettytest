@@ -36,22 +36,23 @@ public class ClientApplication {
                             ch.pipeline().addLast(new LoggingHandler(LogLevel.DEBUG));
                             ch.pipeline().addLast(new RequestMessagePacketEncoder(FastJsonSerializer.X));
                             ch.pipeline().addLast(new ResponseMessagePacketDecoder(FastJsonSerializer.X));
-                            ch.pipeline().addLast(new SimpleChannelInboundHandler<ResponseMessagePacket>() {
-                                @Override
-                                protected void channelRead0(ChannelHandlerContext ctx, ResponseMessagePacket packet) throws Exception {
-                                    Object targetPayload = packet.getPayload();
-                                    if (targetPayload instanceof ByteBuf) {
-                                        ByteBuf byteBuf = (ByteBuf)targetPayload;
-                                        int readableByteLength = byteBuf.readableBytes();
-                                        byte[] bytes = new byte[readableByteLength];
-                                        byteBuf.readBytes(bytes);
-                                        targetPayload = FastJsonSerializer.X.decode(bytes, String.class);
-                                        byteBuf.release();
-                                    }
-                                    packet.setPayload(targetPayload);
-                                    log.info("接收到来自服务端的响应消息，消息内容：{}",JSON.toJSONString(packet));
-                                }
-                            });
+//                            ch.pipeline().addLast(new SimpleChannelInboundHandler<ResponseMessagePacket>() {
+//                                @Override
+//                                protected void channelRead0(ChannelHandlerContext ctx, ResponseMessagePacket packet) throws Exception {
+//                                    Object targetPayload = packet.getPayload();
+//                                    if (targetPayload instanceof ByteBuf) {
+//                                        ByteBuf byteBuf = (ByteBuf)targetPayload;
+//                                        int readableByteLength = byteBuf.readableBytes();
+//                                        byte[] bytes = new byte[readableByteLength];
+//                                        byteBuf.readBytes(bytes);
+//                                        targetPayload = FastJsonSerializer.X.decode(bytes, String.class);
+//                                        byteBuf.release();
+//                                    }
+//                                    packet.setPayload(targetPayload);
+//                                    log.info("接收到来自服务端的响应消息，消息内容：{}",JSON.toJSONString(packet));
+//                                }
+//                            });
+                            ch.pipeline().addLast(new ClientHandler());
                         }
                     });
 
@@ -60,7 +61,7 @@ public class ClientApplication {
             ClientChannelHolder.channel_reference.set(future.channel());
             HelloService helloService = ContractProxyFactory.ofProxy(HelloService.class);
             String result = helloService.sayHello("wayne");
-            log.info("helloService sayHello wayne result is:%s",result);
+            log.info("helloService sayHello wayne result is:{}",result);
 
             future.channel().closeFuture().sync();
         } finally {

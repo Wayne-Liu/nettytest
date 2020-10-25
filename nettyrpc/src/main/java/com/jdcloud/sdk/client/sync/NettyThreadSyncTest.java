@@ -5,14 +5,13 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.springframework.test.context.event.annotation.BeforeTestClass;
 
 import java.util.Map;
 import java.util.UUID;
-import java.util.concurrent.Callable;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 @Slf4j
 public class NettyThreadSyncTest {
@@ -67,7 +66,7 @@ public class NettyThreadSyncTest {
 
     private static final Map<String,ResponseFuture> RESPONSE_FUTURE_TABLE = Maps.newConcurrentMap();
 
-    @BeforeTestClass
+    @BeforeAll
     public static void beforeClass() {
         String requestId = UUID.randomUUID().toString();
         String requestContent = "wayne";
@@ -83,10 +82,45 @@ public class NettyThreadSyncTest {
 
         RESPONSE_TASK = () -> {
             String responseContent = processBusiness(requestContent);
-
-
+            try {
+                ResponseFuture responseFuture = RESPONSE_FUTURE_TABLE.get(requestId);
+                if (null != responseFuture) {
+                    log.warn("处理响应成功，请求ID：{}，响应内容：{}", requestId, responseContent);
+                    responseFuture.putResponse(responseContent);
+                } else {
+                    log.warn("请求ID[{}]对应的ResponseFuture不存在，忽略处理",requestId);
+                }
+            } catch (Exception e) {
+                log.info("处理响应失败，请求ID:{},响应内容：{}",requestId,responseContent);
+                throw new RuntimeException(e);
+            }
         };
+
+        REQUEST_THREAD = Executors.newSingleThreadExecutor(runnable ->{
+            Thread thread = new Thread(runnable, "REQUEST_THREAD");
+            thread.setDaemon(true);
+            return thread;
+        });
+
+        NETTY_IO_THREAD = Executors.newSingleThreadExecutor(runnable ->{
+            Thread thread = new Thread(runnable, "NETTY_IO_THREAD");
+            thread.setDaemon(true);
+            return thread;
+        });
+
     }
 
+    @Test
+    public void testProcessSync() throws InterruptedException, ExecutionException {
+        log.info("异步提交请求处理任务.....");
+        Future<Object> future = REQUEST_THREAD.submit(REQUEST_TASK);
+
+        Thread.sleep(1500);
+        log.info("异步提交响应处理任务....");
+        NETTY_IO_THREAD.execute(RESPONSE_TASK);
+
+        log.info("同步获取请求结果:{}",future.get());
+        Thread.sleep(Long.MAX_VALUE);
+    }
 
 }
