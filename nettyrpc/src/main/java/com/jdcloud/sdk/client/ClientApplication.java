@@ -3,6 +3,7 @@ package com.jdcloud.sdk.client;
 import com.alibaba.fastjson.JSON;
 import com.jdcloud.sdk.common.*;
 import com.jdcloud.sdk.server.contract.HelloService;
+import com.jdcloud.sdk.server.contract.service.LookDir;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.*;
@@ -62,6 +63,10 @@ public class ClientApplication {
             HelloService helloService = ContractProxyFactory.ofProxy(HelloService.class);
             String result = helloService.sayHello("wayne");
             log.info("helloService sayHello wayne result is:{}",result);
+
+            LookDir dirService = ContractProxyFactory.ofProxy(LookDir.class);
+            String dir = dirService.getDir("Dubbo");
+            log.info("LookDir:{}",dir);
 
             future.channel().closeFuture().sync();
         } finally {
